@@ -34,7 +34,8 @@ class MyComponent extends React.Component {
   render() {
     return (
       <div>
-        My name is {this.state.name} and I'm from {this.state.address}
+        {/* My name is {this.state.name} and I'm from {this.state.address} */}
+        My name is {this.state.name} and my age is {this.state.age}
         <button onMouseOver={this.handleOnMouseOver}>Hover me</button>
         <button
           onClick={(event) => {
