@@ -3,73 +3,16 @@
 //merge state only occurs with react => class
 
 import React from "react";
+import UserInfor from "./UserInfor";
 
 class MyComponent extends React.Component {
-  state = {
-    name: "Van",
-    address: "Green Pear",
-    age: 13,
-  };
-
-  handleClick = (event) => {
-    console.log(">>Click me my button");
-    // console.log(`My name is`, this.state.name);
-    console.log(`My age is`, this.state.age);
-
-    //console.log("random number: ", Math.floor(Math.random() * 100 + 1));
-    this.setState({
-      name: "green pear",
-      age: Math.floor(Math.random() * 100 + 1),
-    });
-
-    // this.setState({
-    //   age: Math.floor(Math.random() * 100 + 1),
-    // });
-    // console.log(event);
-  };
-
-  handleOnMouseOver(event) {
-    // console.log(event.pageX);
-  }
-  handleOnChangeInput = (event) => {
-    //bad code
-    //this.state.age = event.target.value
-    this.setState({
-      name: event.target.value,
-    });
-  };
-
-  handleOnChangeAge = (event) => {
-    this.setState({
-      age: event.target.value,
-    });
-  };
-
-  handleOnSubmit = (event) => {
-    event.preventDefault(); //stop reloading page after pressing ok button from alert me
-    console.log(this.state);
-  };
   //JSX ...
   render() {
     return (
       <div>
         {/* My name is {this.state.name} and I'm from {this.state.address} */}
-        My name is {this.state.name} and my age is {this.state.age}
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <label>Your name: </label>
-          <input
-            value={this.state.name} //set original value
-            type="text"
-            onChange={(event) => this.handleOnChangeInput(event)}
-          />
-          <label>Your age: </label>
-          <input
-            value={this.state.age} //set original value
-            type="text"
-            onChange={(event) => this.handleOnChangeAge(event)}
-          />
-          <button>Submit</button>
-        </form>
+
+        <UserInfor></UserInfor>
       </div>
     );
   }
