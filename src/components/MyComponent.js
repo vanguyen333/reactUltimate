@@ -19,11 +19,12 @@ class MyComponent extends React.Component {
     //console.log("random number: ", Math.floor(Math.random() * 100 + 1));
     this.setState({
       name: "green pear",
-    });
-
-    this.setState({
       age: Math.floor(Math.random() * 100 + 1),
     });
+
+    // this.setState({
+    //   age: Math.floor(Math.random() * 100 + 1),
+    // });
     // console.log(event);
   };
 
