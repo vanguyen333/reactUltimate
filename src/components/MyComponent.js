@@ -48,6 +48,7 @@ class MyComponent extends React.Component {
         My name is {this.state.name} and my age is {this.state.age}
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <input
+            value={this.state.name} //set original value
             type="text"
             onChange={(event) => this.handleOnChangeInput(event)}
           />
