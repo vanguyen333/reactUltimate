@@ -9,7 +9,7 @@ import DisplayInfor from "./DisplayInfor";
 class MyComponent extends React.Component {
   //JSX ...
   render() {
-    const myAge = 50;
+    const myInfor = ["ab", "b", "c"];
     return (
       <div>
         {/* My name is {this.state.name} and I'm from {this.state.address} */}
@@ -19,7 +19,7 @@ class MyComponent extends React.Component {
         <br />
         <DisplayInfor name="Green pear" age="30" />
         <hr />
-        <DisplayInfor name="Chiquita" age={myAge} />
+        <DisplayInfor name="Chiquita" age={13} myInfor={myInfor} />
       </div>
     );
   }
