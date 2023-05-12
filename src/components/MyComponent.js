@@ -1,5 +1,6 @@
 //class component
 //function component
+//merge state only occurs with react => class
 
 import React from "react";
 
@@ -12,15 +13,22 @@ class MyComponent extends React.Component {
 
   handleClick = (event) => {
     console.log(">>Click me my button");
-    console.log(`My name is`, this.state.name);
+    // console.log(`My name is`, this.state.name);
+    console.log(`My age is`, this.state.age);
+
+    //console.log("random number: ", Math.floor(Math.random() * 100 + 1));
     this.setState({
       name: "green pear",
+    });
+
+    this.setState({
+      age: Math.floor(Math.random() * 100 + 1),
     });
     // console.log(event);
   };
 
   handleOnMouseOver(event) {
-    console.log(event.pageX);
+    // console.log(event.pageX);
   }
   //JSX
   render() {
