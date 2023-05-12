@@ -13,6 +13,9 @@ class MyComponent extends React.Component {
   handleClick = (event) => {
     console.log(">>Click me my button");
     console.log(`My name is`, this.state.name);
+    this.setState({
+      name: "green pear",
+    });
     // console.log(event);
   };
 
