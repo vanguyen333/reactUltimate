@@ -7,9 +7,16 @@ import UserInfor from "./UserInfor";
 import DisplayInfor from "./DisplayInfor";
 
 class MyComponent extends React.Component {
+  state = {
+    listUsers: [
+      { id: 1, name: "Green Pear", age: "30" },
+      { id: 2, name: "Van", age: "13" },
+      { id: 3, name: "Ngoc", age: "23" },
+    ],
+  };
   //JSX ...
   render() {
-    const myInfor = ["ab", "b", "c"];
+    //Dry : dont repeat yourself
     return (
       <div>
         {/* My name is {this.state.name} and I'm from {this.state.address} */}
@@ -17,9 +24,11 @@ class MyComponent extends React.Component {
         <UserInfor />
         <br />
         <br />
-        <DisplayInfor name="Green pear" age="30" />
+        <DisplayInfor
+          listUsers={this.state.listUsers}
+          users={this.state.listUsers}
+        />
         <hr />
-        <DisplayInfor name="Chiquita" age={13} myInfor={myInfor} />
       </div>
     );
   }
