@@ -32,6 +32,8 @@ class MyComponent extends React.Component {
     // console.log(event.pageX);
   }
   handleOnChangeInput = (event) => {
+    //bad code
+    //this.state.age = event.target.value
     this.setState({
       name: event.target.value,
     });
