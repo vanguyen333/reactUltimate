@@ -4,17 +4,28 @@
 import React from "react";
 
 class MyComponent extends React.Component {
-  //JSX
   state = {
     name: "Van",
     address: "Green Pear",
     age: 0,
   };
+
+  handleClick(event) {
+    console.log(">>Click me my button");
+    console.log(`My name is`, this.state.name);
+    // console.log(event);
+  }
+
+  handleOnMouseOver(event) {
+    console.log(event.pageX);
+  }
+  //JSX
   render() {
     return (
       <div>
         My name is {this.state.name} and I'm from {this.state.address}
-        <button>Click me</button>
+        <button onMouseOver={this.handleOnMouseOver}>Hover me</button>
+        <button onClick={this.handleClick}>Click me</button>
       </div>
     );
   }
