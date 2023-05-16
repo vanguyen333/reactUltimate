@@ -16,10 +16,16 @@ class MyComponent extends React.Component {
   };
 
   handleAddNewUser = (userObj) => {
-    console.log(">>Check data from parents: ", userObj);
+    let listUsersNew = this.state.listUsers;
+    listUsersNew.unshift(userObj);
+    console.log("check:", listUsersNew);
     this.setState({
-      listUsers: [userObj, ...this.state.listUsers],
+      listUsers: listUsersNew,
     });
+
+    // this.setState({
+    //   listUsers: [userObj, ...this.state.listUsers],
+    // });
   };
 
   //JSX ...
