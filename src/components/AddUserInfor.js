@@ -23,7 +23,12 @@ class AddUserInfor extends React.Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault(); //stop reloading page after pressing ok button from alert me
-    console.log(this.state);
+
+    this.props.handleAddNewUser({
+      id: Math.floor(Math.random() * 100 + 1) + "-random",
+      name: this.state.name,
+      age: this.state.age,
+    });
   };
   render() {
     return (

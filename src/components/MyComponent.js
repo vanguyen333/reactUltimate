@@ -14,6 +14,11 @@ class MyComponent extends React.Component {
       { id: 3, name: "Ngoc", age: "69" },
     ],
   };
+
+  handleAddNewUser = (userObj) => {
+    console.log(">>Check data from parents: ", userObj);
+  };
+
   //JSX ...
   render() {
     //Dry : dont repeat yourself
@@ -21,13 +26,11 @@ class MyComponent extends React.Component {
       <div>
         {/* My name is {this.state.name} and I'm from {this.state.address} */}
 
-        <AddUserInfor />
+        <AddUserInfor handleAddNewUser={this.handleAddNewUser} />
+
         <br />
         <br />
-        <DisplayInfor
-          listUsers={this.state.listUsers}
-          users={this.state.listUsers}
-        />
+        <DisplayInfor listUsers={this.state.listUsers} />
         <hr />
       </div>
     );
