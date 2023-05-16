@@ -3,7 +3,7 @@
 //merge state only occurs with react => class
 
 import React from "react";
-import UserInfor from "./UserInfor";
+import AddUserInfor from "./AddUserInfor";
 import DisplayInfor from "./DisplayInfor";
 
 class MyComponent extends React.Component {
@@ -21,7 +21,7 @@ class MyComponent extends React.Component {
       <div>
         {/* My name is {this.state.name} and I'm from {this.state.address} */}
 
-        <UserInfor />
+        <AddUserInfor />
         <br />
         <br />
         <DisplayInfor
