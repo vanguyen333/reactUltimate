@@ -12,7 +12,15 @@ class DisplayInfor extends React.Component {
         {listUsers.map((user, index) => {
           console.log(">>>Check map user:", user);
           //the plus + sign will convert string to number
-          if (+user.age > 18) {
+          {
+            return (
+              <div key={user.id} className={+user.age > 18 ? "green" : "red"}>
+                <div>My name's {user.name}</div>
+                <div>My age's {user.age} </div>
+              </div>
+            );
+
+            /* if (+user.age > 18) {
             return (
               <div key={user.id} className="green">
                 <div>My name's {user.name}</div>
@@ -26,6 +34,7 @@ class DisplayInfor extends React.Component {
                 <div>My age's {user.age} </div>
               </div>
             );
+          } */
           }
         })}
         {/* <div>My name's {name}</div>
