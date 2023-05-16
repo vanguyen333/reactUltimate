@@ -3,8 +3,10 @@ import React from "react";
 class DisplayInfor extends React.Component {
   render() {
     //destructuring array/object
+
     const { listUsers } = this.props; //object
-    console.log(listUsers);
+    // console.table(listUsers); //print users as table
+    //   console.log(listUsers);
     return (
       <div>
         {listUsers.map((user, index) => {
