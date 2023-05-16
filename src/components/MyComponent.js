@@ -16,16 +16,19 @@ class MyComponent extends React.Component {
   };
 
   handleAddNewUser = (userObj) => {
-    let listUsersNew = this.state.listUsers;
-    listUsersNew.unshift(userObj);
-    console.log("check:", listUsersNew);
-    this.setState({
-      listUsers: listUsersNew,
-    });
+    // let listUsersNew = this.state.listUsers;
+    // listUsersNew.unshift(userObj);
+    // console.log("check:", listUsersNew);
+    // this.setState({
+    //   listUsers: listUsersNew,
+    // });
 
     // this.setState({
     //   listUsers: [userObj, ...this.state.listUsers],
     // });
+    this.setState({
+      listUsers: [...this.state.listUsers, userObj],
+    });
   };
 
   //JSX ...
