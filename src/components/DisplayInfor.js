@@ -7,7 +7,7 @@ class DisplayInfor extends React.Component {
   };
   handleShowHide = () => {
     this.setState({
-      isShowListUser: false,
+      isShowListUser: !this.state.isShowListUser, //! is like a toggle, on and off
     });
   };
   render() {
