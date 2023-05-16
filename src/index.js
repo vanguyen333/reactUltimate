@@ -14,6 +14,7 @@ root.render(
   </Provider>
 );
 //React.StrictMode make the site render twice, by commenting out, this will be prevented
+//strictmode only runs in local
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
