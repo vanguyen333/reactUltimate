@@ -2,8 +2,13 @@
 import React from "react";
 
 class DisplayInfor extends React.Component {
+  state = {
+    isShowListUser: true,
+  };
   handleShowHide = () => {
-    alert("me");
+    this.setState({
+      isShowListUser: false,
+    });
   };
   render() {
     //destructuring array/object
@@ -24,7 +29,7 @@ class DisplayInfor extends React.Component {
           </span>
         </div>
         {/* if false, will hide users */}
-        {false && (
+        {this.state.isShowListUser && (
           <div>
             {listUsers.map((user, index) => {
               console.log(">>>Check map user:", user);
