@@ -19,7 +19,7 @@ class DisplayInfor extends React.Component {
     //   console.log(listUsers);
     // console.table(listUsers);
     return (
-      <div>
+      <div className="display-infor-container">
         <div>
           <span
             onClick={() => {
