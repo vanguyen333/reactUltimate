@@ -43,7 +43,7 @@ class DisplayInfor extends React.Component {
                       key={user.id}
                       className={+user.age > 18 ? "green" : "red"}
                     >
-                      <div>My name's {user.name}</div>
+                      <div style={{ color: "blue" }}>My name's {user.name}</div>
                       <div>My age's {user.age} </div>
                     </div>
                   </div>
