@@ -1,5 +1,6 @@
 /* eslint-disable no-lone-blocks */
 import React from "react";
+import "./DisplayInfor.scss";
 
 class DisplayInfor extends React.Component {
   state = {
