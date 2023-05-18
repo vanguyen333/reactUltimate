@@ -35,7 +35,7 @@ class DisplayInfor extends React.Component {
         </div>
         {/* if false, will hide users */}
         {this.state.isShowListUser && (
-          <div>
+          <>
             {listUsers.map((user, index) => {
               console.log(">>>Check map user:", user);
               //the plus + sign will convert string to number
@@ -53,7 +53,7 @@ class DisplayInfor extends React.Component {
                 );
               }
             })}
-          </div>
+          </>
         )}
       </div>
     );

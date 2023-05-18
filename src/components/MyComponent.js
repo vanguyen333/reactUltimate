@@ -35,16 +35,19 @@ class MyComponent extends React.Component {
   render() {
     //Dry : dont repeat yourself
     return (
-      <div>
-        {/* My name is {this.state.name} and I'm from {this.state.address} */}
+      <>
+        <div className="a">
+          {/* My name is {this.state.name} and I'm from {this.state.address} */}
 
-        <AddUserInfor handleAddNewUser={this.handleAddNewUser} />
+          <AddUserInfor handleAddNewUser={this.handleAddNewUser} />
 
-        <br />
-        <br />
-        <DisplayInfor listUsers={this.state.listUsers} />
-        <hr />
-      </div>
+          <br />
+          <br />
+          <DisplayInfor listUsers={this.state.listUsers} />
+          <hr />
+        </div>
+        <div className="b"></div>
+      </>
     );
   }
 }
