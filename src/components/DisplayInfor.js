@@ -1,6 +1,7 @@
 /* eslint-disable no-lone-blocks */
 import React from "react";
 import "./DisplayInfor.scss";
+import logo from "./../logo.svg";
 
 class DisplayInfor extends React.Component {
   state = {
@@ -20,6 +21,7 @@ class DisplayInfor extends React.Component {
     // console.table(listUsers);
     return (
       <div className="display-infor-container">
+        <img src={logo} />
         <div>
           <span
             onClick={() => {
@@ -44,7 +46,7 @@ class DisplayInfor extends React.Component {
                       key={user.id}
                       className={+user.age > 18 ? "green" : "red"}
                     >
-                      <div style={{ color: "blue" }}>My name's {user.name}</div>
+                      <div>My name's {user.name}</div>
                       <div>My age's {user.age} </div>
                     </div>
                   </div>
