@@ -4,15 +4,27 @@ import "./DisplayInfor.scss";
 import logo from "./../logo.svg";
 
 class DisplayInfor extends React.Component {
-  state = {
-    isShowListUser: true,
-  };
+  constructor(props) {
+    console.log(">>>Call constructor: 1");
+    super(props);
+    this.state = {
+      isShowListUser: true,
+    };
+  }
+
+  componentDidMount() {
+    console.log(">>>call me component did mount");
+    setTimeout(() => {
+      document.title = "Van & Green Pear";
+    }, 3000);
+  }
   handleShowHide = () => {
     this.setState({
       isShowListUser: !this.state.isShowListUser, //! is like a toggle, on and off
     });
   };
   render() {
+    console.log("Call me render");
     //destructuring array/object
 
     const { listUsers } = this.props; //object
@@ -37,7 +49,9 @@ class DisplayInfor extends React.Component {
         {this.state.isShowListUser && (
           <>
             {listUsers.map((user, index) => {
-              console.log(">>>Check map user:", user);
+              {
+                /* console.log(">>>Check map user:", user); */
+              }
               //the plus + sign will convert string to number
               {
                 return (
