@@ -18,6 +18,11 @@ class DisplayInfor extends React.Component {
       document.title = "Van & Green Pear";
     }, 3000);
   }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log(">>>call me componentDidUpdate", this.props, prevProps);
+  }
+
   handleShowHide = () => {
     this.setState({
       isShowListUser: !this.state.isShowListUser, //! is like a toggle, on and off
