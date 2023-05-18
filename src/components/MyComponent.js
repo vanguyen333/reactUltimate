@@ -34,8 +34,14 @@ class MyComponent extends React.Component {
   //JSX ...
   render() {
     //Dry : dont repeat yourself
+    const test = { name: " Green Pear ", age: 45 };
     return (
       <>
+        {/* {test.name}
+        {test.age} */}
+        {/* {console.log("Check test: ", test)} */}
+        {JSON.stringify(test)}
+        <br />
         <div className="a">
           {/* My name is {this.state.name} and I'm from {this.state.address} */}
 
