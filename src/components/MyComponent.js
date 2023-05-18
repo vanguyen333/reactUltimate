@@ -27,20 +27,27 @@ class MyComponent extends React.Component {
     //   listUsers: [userObj, ...this.state.listUsers],
     // });
     this.setState({
-      listUsers: [...this.state.listUsers, userObj],
+      listUsers: [userObj, ...this.state.listUsers],
     });
   };
 
+  handleDeleteUser = (userId) => {
+    let listUsersClone = [...this.state.listUsers];
+    listUsersClone = listUsersClone.filter((item) => item.id !== userId);
+    this.setState({
+      listUsers: listUsersClone,
+    });
+  };
   //JSX ...
   render() {
     //Dry : dont repeat yourself
-    const test = { name: " Green Pear ", age: 45 };
+    // const test = { name: " Green Pear ", age: 45 };
     return (
       <>
         {/* {test.name}
         {test.age} */}
         {/* {console.log("Check test: ", test)} */}
-        {JSON.stringify(test)}
+        {/* {JSON.stringify(test)} */}
         <br />
         <div className="a">
           {/* My name is {this.state.name} and I'm from {this.state.address} */}
@@ -49,7 +56,10 @@ class MyComponent extends React.Component {
 
           <br />
           <br />
-          <DisplayInfor listUsers={this.state.listUsers} />
+          <DisplayInfor
+            listUsers={this.state.listUsers}
+            handleDeleteUser={this.handleDeleteUser}
+          />
           <hr />
         </div>
         <div className="b"></div>
