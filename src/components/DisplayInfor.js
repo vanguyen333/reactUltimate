@@ -21,6 +21,9 @@ class DisplayInfor extends React.Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log(">>>call me componentDidUpdate", this.props, prevProps);
+    if (this.props.listUsers !== prevProps.listUsers) {
+      alert("You got 5 users");
+    }
   }
 
   handleShowHide = () => {
