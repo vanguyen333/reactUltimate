@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-function BasicExample() {
+const Header = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -29,6 +29,6 @@ function BasicExample() {
       </Container>
     </Navbar>
   );
-}
+};
 
-export default BasicExample;
+export default Header;
