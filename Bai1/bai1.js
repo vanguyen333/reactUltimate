@@ -6,3 +6,7 @@ const x = {};
 x.name = "Hoi Dan IT";
 
 console.log(">>>Check x", x);
+
+const y = [];
+y.push("foo");
+console.log(y);
