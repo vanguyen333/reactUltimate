@@ -1,14 +1,12 @@
-//ES6 classes( can only be used from version 6 of javascript)
+//object properties: thuoc tinh  include thuoctinh_name:value
+let person = { name: "Vanni", age: "32", eye: "brown" };
 
-class Person {
-  constructor(name, address) {
-    this.name = name;
-    this.address = address;
-  }
-  getAddress() {
-    return "I live in " + this.address;
-  }
-}
-const test = new Person("Hoi Dan IT", "Ha Noi");
-console.log(">>>Check test: ", test);
-console.log(">>>Check test: ", test.getAddress());
+console.log(">>Check vvar: ", person);
+//access object properties
+
+console.log(">>Check name: ", person.name); //cach 1
+console.log(">>Check name: ", person["name"]); //cach 2
+
+//arrays are a special type of object
+const nguoi = ["Oanh", "Nguyen", 32];
+console.log(">>Check name: ", nguoi[0]);
