@@ -1,0 +1,4 @@
+Props: allow passing data from parent to child components.
+hook useState: to add a state to a functional component, it returns an array with 2 values: current state and a function to update it( const [name,setname] = useState('Van') //current state is Van
+setName('Oanh') //the updated state is Oanh
+The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called.

@@ -1,0 +1,42 @@
+npx create-react-app my-project
+cd my-project
+
+** install tailwind css 
+npm install -D tailwindcss
+npx tailwindcss init
+
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+npm install bootstrap
+
+
+
+** create a react project with vite
+npm create vite@latest
+project_name
+React
+JavaScript
+cd project_name
+npm install
+npm run dev : to run the project
+
+
+npm create vite@latest project_name -- --template react
+cd project_name
+npm install
+npm run dev
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+inside tailwind.config.js
+ content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+npm run dev
+
+** react js particles: flowing background
+https://www.npmjs.com/package/react-particles-js
+
+npm install react-tsparticles
+
+
+
+

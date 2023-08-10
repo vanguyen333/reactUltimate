@@ -1,0 +1,12 @@
+git branch // checking which branch is being used
+git checkout -b prod //create a new branch named prod
+
+** keo code ve
+git init
+git remote add origin https://github.com/vanguyen333/reactUltimate.git
+git pull origin main
+
+** switch branch
+git checkout main //switch to main branch
+
+

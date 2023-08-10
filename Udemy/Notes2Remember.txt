@@ -1,0 +1,42 @@
+*** Chapter 1 
+** Bai 1
+
+let has a block scope: khai bao o dau thi dung o do
+
+const has a block scope, CANNOT be redeclared
+
+Why can I change a constant object (array) in javascript ???
+https://stackoverflow.com/a/23436563
+https://www.javascripttutorial.net/es6/javascript-const/
+
+When you're adding to an array or object you're not re-assigning or re-declaring the constant, it's already declared and assigned, you're just adding to the "list" that the constant points to.
+
+So this works fine:
+
+const x = {};
+
+x.foo = 'bar';
+
+console.log(x); // {foo : 'bar'}
+
+x.foo = 'bar2';
+
+console.log(x); // {foo : 'bar2'}  
+
+** BAI 2
+//ES6 classes( can only be used from version 6 of javascript)
+
+class Person {
+  constructor(name, address) {
+    this.name = name;
+    this.address = address;
+  }
+  getAddress() {
+    return "I live in " + this.address;
+  }
+}
+const test = new Person("Hoi Dan IT", "Ha Noi");
+console.log(">>>Check test: ", test);
+console.log(">>>Check test: ", test.getAddress());
+
+** BAI &
