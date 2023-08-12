@@ -1,15 +1,23 @@
+import React, { useState } from "react";
+
 const FirstComp = () => {
-  let state = {
+  // Using the useState hook to manage state
+  const [state, setState] = useState({
     name: "van",
     address: "vanguyendev",
     age: 32,
+  });
+
+  // handleClick function to update the name in the state
+  const handleClick = () => {
+    console.log(">> Clicked my button");
+    console.log("My name is", state.name);
+    // Use the setState function to update the state
+    setState({ ...state, name: "Giuse" });
   };
-  const handleClick = (event) => {
-    // console.log("click me");
-    console.log(event.target);
-  };
-  const handleOnMoverOver = () => {
-    console.log(event);
+
+  const handleOnMouseOver = (event) => {
+    console.log(event.pageX);
   };
 
   return (
@@ -18,13 +26,13 @@ const FirstComp = () => {
         My name is {state.name} and my channel is {state.address}
       </h1>
       <button
-        onMouseOver={handleOnMoverOver}
+        onMouseOver={handleOnMouseOver}
         className="border bg-blue-400 rounded py-2 px-4"
       >
         Hover me
       </button>
       <button
-        onClick={handleOnMoverOver}
+        onClick={handleClick}
         className="border bg-blue-400 rounded py-2 px-4"
       >
         Click me
