@@ -8,7 +8,7 @@ const FirstComp = () => {
     age: 32,
   });
 
-  // handleClick function to update the name in the state
+  // handleClick function to update the name in the state.
   const handleClick = () => {
     console.log(">> Clicked my button");
     console.log("My name is", state.name);
