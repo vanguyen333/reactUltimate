@@ -8,12 +8,15 @@ const FirstComp = () => {
     age: 32,
   });
 
-  // handleClick function to update the name in the state.
+  // handleClick function to update the name and age in the state.
   const handleClick = () => {
     console.log(">> Clicked my button");
-    console.log("My name is", state.name);
     // Use the setState function to update the state
-    setState({ ...state, name: "Giuse" });
+    setState({
+      ...state,
+      name: "GIUSE",
+      age: Math.floor(Math.random() * 100 + 1),
+    });
   };
 
   const handleOnMouseOver = (event) => {
@@ -23,7 +26,7 @@ const FirstComp = () => {
   return (
     <div>
       <h1>
-        My name is {state.name} and my channel is {state.address}
+        My name is {state.name} and my age is {state.age}
       </h1>
       <button
         onMouseOver={handleOnMouseOver}
