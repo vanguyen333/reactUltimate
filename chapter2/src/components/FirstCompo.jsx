@@ -19,27 +19,30 @@ const FirstComp = () => {
     });
   };
 
-  const handleOnMouseOver = (event) => {
-    console.log(event.pageX);
+  // const handleOnMouseOver = (event) => {
+  //   console.log(event.pageX);
+  // };
+  const handleOnchangeInput = (event) => {
+    console.log(event, event.target.value);
   };
 
   return (
     <div>
-      <h1>
-        My name is {state.name} and my age is {state.age}
-      </h1>
-      <button
-        onMouseOver={handleOnMouseOver}
-        className="border bg-blue-400 rounded py-2 px-4"
-      >
-        Hover me
-      </button>
-      <button
+      My name is {state.name} and my age is {state.age}
+      {/* <button
         onClick={handleClick}
         className="border bg-blue-400 rounded py-2 px-4"
       >
         Click me
-      </button>
+      </button> */}
+      <form action="">
+        <input
+          onChange={handleOnchangeInput}
+          type="text"
+          className="border shadow"
+        />
+        <button className="border bg-blue-400 rounded py-2 px-4">Submit</button>
+      </form>
     </div>
   );
 };
