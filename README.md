@@ -1,3 +1,4 @@
+#This is a full stack website using React JS, Node JS, Docker, Postman,MySQL
 #Node.js v14.17.0
 
 # Getting Started with Create React App
