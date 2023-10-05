@@ -6,44 +6,11 @@ import MyComponent from "./components/MyComponent";
 
 import React from "react";
 class App extends React.Component {
-  state = {
-    name: "Van",
-    address: "Earth",
-    age: 3,
-  };
-  handleClick = (event) => {
-    // console.log(event.target);
-
-    this.setState({
-      name: "Ngoc",
-      age: Math.floor(Math.random() * 100 + 1),
-    });
-    // this.setState({
-
-    // });
-  };
-  handleOnChangeInput = (event) => {
-    this.setState({
-      name: event.target.value,
-    });
-    // console.log(event, event.target.value);
-  };
-  handleOnSubmit = (event) => {
-    event.preventDefault(); //prevent refresh page after pressing submmit
-    console.log(this.state);
-  };
   //JSX
   render() {
     return (
       <div>
-        My name is {this.state.name} and I'm {this.state.age}
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <input
-            type="text"
-            onChange={(event) => this.handleOnChangeInput(event)}
-          />
-          <button>Submit</button>
-        </form>
+        <MyComponent />
       </div>
     );
   }
