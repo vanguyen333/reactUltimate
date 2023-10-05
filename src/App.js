@@ -11,20 +11,33 @@ class App extends React.Component {
     address: "Earth",
     age: 3,
   };
-  handleClick(event) {
+  handleClick = (event) => {
     // console.log(event.target);
-    console.log(">>>click me", this.state.name);
-  }
-  handleOnMouseOver(e) {
-    console.log(e.pageX);
+
+    this.setState({
+      name: "Ngoc",
+      age: Math.floor(Math.random() * 100 + 1),
+    });
+    // this.setState({
+
+    // });
+  };
+  handleOnMouseOver(event) {
+    // console.log(event.pageX);
   }
   //JSX
   render() {
     return (
       <div>
-        My name is {this.state.name} and I'm from {this.state.address}
-        <button onClick={this.handleClick}>Click me</button>
+        My name is {this.state.name} and I'm {this.state.age}
         <button onMouseOver={this.handleOnMouseOver}>Hover me</button>
+        <button
+          onClick={(event) => {
+            this.handleClick(event);
+          }}
+        >
+          Click me
+        </button>
       </div>
     );
   }
