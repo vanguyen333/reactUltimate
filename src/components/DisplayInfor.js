@@ -1,5 +1,13 @@
 import React from "react";
 class DisplayInfor extends React.Component {
+  state = {
+    isShowListUser: true,
+  };
+  handleShowHide = () => {
+    this.setState({
+      isShowListUser: !this.state.isShowListUser,
+    });
+  };
   render() {
     // console.log(this.props);
     //Destructuring array/object
@@ -10,38 +18,31 @@ class DisplayInfor extends React.Component {
     //prop = >properties thuoc tinh, truyen du lieu from dad to kids
     return (
       <div>
-        {listUsers.map((user) => {
-          console.log(">>check map user:", user);
-          return (
-            //   {/* the +m sign is to transform age of 18 string to number */}
-            <div key={user.id} className={+user.age > 18 ? "green" : "red"}>
-              <div>My name is {user.name} </div>
-              <div>My age is {user.age}</div>
-              <hr />
-            </div>
-          );
-
-          {
-            /* if (+user.age > 18) {
-            return (
-              <div key={user.id} className="green">
-                <div>My name is {user.name} </div>
-                <div>My age is {user.age}</div>
-                <hr />
-              </div>
-            );
-          } else {
-            return (
-              <div key={user.id} className="red">
-                <div>My name is {user.name} </div>
-                <div>My age is {user.age}</div>
-                <hr />
-              </div>
-            );
-          } */
-          }
-        })}
-        <hr />
+        <div>
+          <span
+            onClick={() => {
+              this.handleShowHide();
+            }}
+          >
+            Hide user list
+          </span>
+        </div>
+        {this.state.isShowListUser && (
+          <div>
+            {listUsers.map((user) => {
+              console.log(">>check map user:", user);
+              return (
+                //   {/* the +m sign is to transform age of 18 string to number */}
+                <div key={user.id} className={+user.age > 18 ? "green" : "red"}>
+                  <div>My name is {user.name} </div>
+                  <div>My age is {user.age}</div>
+                  <hr />
+                </div>
+              );
+            })}
+            <hr />
+          </div>
+        )}
       </div>
     );
   }
