@@ -1,9 +1,9 @@
 import React from "react";
 class AddUserInfor extends React.Component {
   state = {
-    name: "Van",
-    address: "Earth",
-    age: 3,
+    name: "",
+    address: "",
+    age: "",
   };
 
   handleOnChangeInput = (event) => {
