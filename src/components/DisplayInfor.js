@@ -12,7 +12,17 @@ class DisplayInfor extends React.Component {
       <div>
         {listUsers.map((user) => {
           console.log(">>check map user:", user);
-          if (+user.age > 18) {
+          return (
+            //   {/* the +m sign is to transform age of 18 string to number */}
+            <div key={user.id} className={+user.age > 18 ? "green" : "red"}>
+              <div>My name is {user.name} </div>
+              <div>My age is {user.age}</div>
+              <hr />
+            </div>
+          );
+
+          {
+            /* if (+user.age > 18) {
             return (
               <div key={user.id} className="green">
                 <div>My name is {user.name} </div>
@@ -28,6 +38,7 @@ class DisplayInfor extends React.Component {
                 <hr />
               </div>
             );
+          } */
           }
         })}
         <hr />
