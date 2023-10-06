@@ -5,27 +5,31 @@ class DisplayInfor extends React.Component {
     //Destructuring array/object
     const { listUsers } = this.props; //object
     console.log(listUsers);
+    // console.table(listUsers);
     // === const listUsers = this.props.listUsers;
     //prop = >properties thuoc tinh, truyen du lieu from dad to kids
     return (
       <div>
         {listUsers.map((user) => {
-          return (
-            <div key={user.id}>
-              <div>My name is {user.name} </div>
-              <div>My age is {user.age}</div>
-              <hr />
-            </div>
-          );
+          console.log(">>check map user:", user);
+          if (+user.age > 18) {
+            return (
+              <div key={user.id} className="green">
+                <div>My name is {user.name} </div>
+                <div>My age is {user.age}</div>
+                <hr />
+              </div>
+            );
+          } else {
+            return (
+              <div key={user.id} className="red">
+                <div>My name is {user.name} </div>
+                <div>My age is {user.age}</div>
+                <hr />
+              </div>
+            );
+          }
         })}
-        {/* <div>My name is {name}</div>
-        <div>My age is {age}</div>
-        <hr />
-        <div>My name is {name}</div>
-        <div>My age is {age}</div>
-        <hr />
-        <div>My name is {name}</div>
-        <div>My age is {age}</div> */}
         <hr />
       </div>
     );
