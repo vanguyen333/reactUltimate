@@ -2,14 +2,20 @@ import React from "react";
 import "./DisplayInfor.scss";
 import logo from "./../logo.svg";
 class DisplayInfor extends React.Component {
-  state = {
-    isShowListUser: true,
-  };
+  //prepare data
+  constructor(props) {
+    super(props); // child get all props from dad
+    //babel compiler
+    this.state = {
+      isShowListUser: true,
+    };
+  }
   handleShowHide = () => {
     this.setState({
       isShowListUser: !this.state.isShowListUser,
     });
   };
+
   render() {
     // console.log(this.props);
     //Destructuring array/object
