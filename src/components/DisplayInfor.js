@@ -4,11 +4,21 @@ import logo from "./../logo.svg";
 class DisplayInfor extends React.Component {
   //prepare data
   constructor(props) {
+    console.log("call constructor: 1");
     super(props); // child get all props from dad
     //babel compiler
     this.state = {
       isShowListUser: true,
     };
+  }
+  componentDidMount() {
+    console.log(">>>call me did mount");
+    setTimeout(() => {
+      document.title = "Van nguyen the coder";
+    }, 3000);
+  }
+  componentDidUpdate() {
+    console.log(">>>call me did update");
   }
   handleShowHide = () => {
     this.setState({
@@ -17,6 +27,7 @@ class DisplayInfor extends React.Component {
   };
 
   render() {
+    console.log(">>>Call me render");
     // console.log(this.props);
     //Destructuring array/object
     const { listUsers } = this.props; //object
