@@ -20,7 +20,7 @@ class DisplayInfor extends React.Component {
   componentDidUpdate() {
     console.log(">>>call me did update");
   }
-  handleShowHide = () => {
+  handleShowHide = (prevProps, prevState, snapshot) => {
     this.setState({
       isShowListUser: !this.state.isShowListUser,
     });
