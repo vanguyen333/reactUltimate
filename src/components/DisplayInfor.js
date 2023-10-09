@@ -17,10 +17,15 @@ class DisplayInfor extends React.Component {
       document.title = "Van nguyen the coder";
     }, 3000);
   }
-  componentDidUpdate() {
-    console.log(">>>call me did update");
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log(">>>call me did update", this.props, prevProps);
+    if (this.props.listUsers !== prevProps.listUsers) {
+      if (this.props.listUsers.length === 5) {
+        alert("you got 5 users");
+      }
+    }
   }
-  handleShowHide = (prevProps, prevState, snapshot) => {
+  handleShowHide = () => {
     this.setState({
       isShowListUser: !this.state.isShowListUser,
     });
